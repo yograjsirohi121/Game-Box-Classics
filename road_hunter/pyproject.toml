@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "road-hunter"
+version = "1.0.0"
+description = "Classic Road Fighter style vertical racing game built with pygame"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.5.0",
+]
+
+[project.scripts]
+road_hunter = "road_hunter.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["road_hunter*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
